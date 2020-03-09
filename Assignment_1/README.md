@@ -1,4 +1,4 @@
-# program to encrypt and decrypt classical ciphers as follows.
+# program to encrypt and decrypt classical ciphers .
 
 ### The whole program in one solution.py file.
 ### The program supports encryption and decryption using shift, affine, andvigenere ciphers.
