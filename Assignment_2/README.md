@@ -1,17 +1,15 @@
+# **Describtion of solution process**
 `from struct import pack, unpack`
 
 `def F(w):
     return ((w * 31337) ^ (w * 1337 >> 16)) % 2 ** 32`
 
-
-### 0000 0100 1101 0010  # (1234)
-### 0000 0101 0011 1001  # (1337)
-### 0111 1010 0110 1001  # (31337)
 `a, b, c, d = 1, 2, 3, 4`
+
 ## at first we will unpack the 2 byte block using "<4I" format
 ### which stands for leaving the first 4 bits as it's and forming the rest in 4 byte
 
-## 5 xor 6 = 3  and 3 xor 6 = 5 and  3 xor 6 = 5 therefor the reverse of xor operation is the same xor
+## Because 5 xor 6 = 3  then 3 xor 6 = 5 and  3 xor 6 = 5 therefor the reverse of xor operation is the same xor
 ## F() function do xor operation then it's the reverse of itself
 
 
@@ -27,10 +25,11 @@
 print(b)
 print(c)
 print(d)`
-# Second stage decryption #obtain `<d> -> <a> -> <b> -> <c>` obtained from secand stage
-# notice we will use `<a>`(encrypted version) in obtaining `<c>` at te end
-# but we will over write it when obtaining `<a>`(decrypted version) itself
-# so we store it in tempa
+
+## Second stage decryption #obtain `<d> -> <a> -> <b> -> <c>` obtained from secand stage
+### notice we will use `<a>`(encrypted version) in obtaining `<c>` at te end
+### but we will over write it when obtaining `<a>`(decrypted version) itself
+### so we store it in tempa
 
 # Decryption of  stage two
 
@@ -58,10 +57,10 @@ print(b)
 print(c)
 print(d)`
     
-# Second stage decryption #obtain `<a> -> <d> -> <c> -> <b>` obtained from first stage
-# notice we will use `<a>`(encrypted version) in obtaining `<b>` at te end
-# but we will over write it when obtaining `<a>`(decrypted version) itself
-# so we store it in tempa
+## Second stage decryption #obtain `<a> -> <d> -> <c> -> <b>` obtained from first stage
+### notice we will use `<a>`(encrypted version) in obtaining `<b>` at te end
+### but we will over write it when obtaining `<a>`(decrypted version) itself
+### so we store it in tempa
 
 # Decryption of  stage one
 
