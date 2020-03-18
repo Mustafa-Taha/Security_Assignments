@@ -16,7 +16,7 @@
 
 
 # Analysing encryption stage two
-## starting of <a>, <b,> <c>, <d> resultant of second stage
+## starting of `<a>, <b,> <c>, <d>` resultant of second stage
     
 `a, b, c, d = c ^ F(d | F(b ^ F(a)) ^ F(d | b) ^ a), \
              b ^ F(d ^ F(a) ^ (d | a)), \
@@ -27,7 +27,7 @@
 print(b)
 print(c)
 print(d)`
-# Second stage decryption #obtain <d> -> <a> -> <b> -> <c> obtained from secand stage
+# Second stage decryption #obtain `<d> -> <a> -> <b> -> <c>` obtained from secand stage
 # notice we will use <a>(encrypted version) in obtaining <c> at te end
 # but we will over write it when obtaining <a>(decrypted version) itself
 # so we store it in tempa
@@ -46,7 +46,7 @@ print(c)
 print(d)`
 
 # Analysing encryption stage one
-## assuming starting of <a>, <b,> <c>, <d> resultant of first stage
+## assuming starting of `<a>, <b,> <c>, <d>` resultant of first stage
     
 `a, b, c, d = b ^ F(a | F(c ^ F(d)) ^ F(a | c) ^ d), \
              c ^ F(a ^ F(d) ^ (a | d)), \
@@ -58,7 +58,7 @@ print(b)
 print(c)
 print(d)`
     
-# Second stage decryption #obtain <a> -> <d> -> <c> -> <b> obtained from first stage
+# Second stage decryption #obtain `<a> -> <d> -> <c> -> <b>` obtained from first stage
 # notice we will use <a>(encrypted version) in obtaining <b> at te end
 # but we will over write it when obtaining <a>(decrypted version) itself
 # so we store it in tempa
