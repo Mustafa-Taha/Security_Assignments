@@ -16,7 +16,7 @@
 
 
 # Analysing encryption stage two
-## starting of `<a>, <b,> <c>, <d>` resultant of second stage
+## starting of `<a>, <b>, <c>, <d>` resultant of second stage
     
 `a, b, c, d = c ^ F(d | F(b ^ F(a)) ^ F(d | b) ^ a), \
              b ^ F(d ^ F(a) ^ (d | a)), \
@@ -28,8 +28,8 @@ print(b)
 print(c)
 print(d)`
 # Second stage decryption #obtain `<d> -> <a> -> <b> -> <c>` obtained from secand stage
-# notice we will use <a>(encrypted version) in obtaining <c> at te end
-# but we will over write it when obtaining <a>(decrypted version) itself
+# notice we will use `<a>`(encrypted version) in obtaining `<c>` at te end
+# but we will over write it when obtaining `<a>`(decrypted version) itself
 # so we store it in tempa
 
 # Decryption of  stage two
@@ -46,7 +46,7 @@ print(c)
 print(d)`
 
 # Analysing encryption stage one
-## assuming starting of `<a>, <b,> <c>, <d>` resultant of first stage
+## assuming starting of `<a>, <b>, <c>, <d>` resultant of first stage
     
 `a, b, c, d = b ^ F(a | F(c ^ F(d)) ^ F(a | c) ^ d), \
              c ^ F(a ^ F(d) ^ (a | d)), \
@@ -59,8 +59,8 @@ print(c)
 print(d)`
     
 # Second stage decryption #obtain `<a> -> <d> -> <c> -> <b>` obtained from first stage
-# notice we will use <a>(encrypted version) in obtaining <b> at te end
-# but we will over write it when obtaining <a>(decrypted version) itself
+# notice we will use `<a>`(encrypted version) in obtaining `<b>` at te end
+# but we will over write it when obtaining `<a>`(decrypted version) itself
 # so we store it in tempa
 
 # Decryption of  stage one
@@ -77,5 +77,5 @@ print(c)
 print(d)`
 
 ## after reversing the two stages we will do it for 32 round
-## then we pach the result of  <a>, <b,> <c>, <d> using the same format at unpacking
+## then we pach the result of  `<a>, <b>, <c>, <d>` using the same format at unpacking
 ## then the flag appears and removing the redundant <#> then submit.
