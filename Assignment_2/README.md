@@ -13,7 +13,7 @@
 ## F() function do xor operation then it's the reverse of itself
 
 
-# Analysing encryption stage two
+# 1) Analysing encryption stage two
 ## starting of `<a>, <b>, <c>, <d>` resultant of second stage
     
 `a, b, c, d = c ^ F(d | F(b ^ F(a)) ^ F(d | b) ^ a), \
@@ -31,7 +31,7 @@ print(d)`
 ### but we will over write it when obtaining `<a>`(decrypted version) itself
 ### so we store it in tempa
 
-# Decryption of  stage two
+# 1.1) Decryption of  stage two
 
 `tempa = a
 d = d ^ 1337  # 0000 0101 0011 1001
@@ -44,7 +44,7 @@ print(b)
 print(c)
 print(d)`
 
-# Analysing encryption stage one
+# 2) Analysing encryption stage one
 ## assuming starting of `<a>, <b>, <c>, <d>` resultant of first stage
     
 `a, b, c, d = b ^ F(a | F(c ^ F(d)) ^ F(a | c) ^ d), \
@@ -62,7 +62,7 @@ print(d)`
 ### but we will over write it when obtaining `<a>`(decrypted version) itself
 ### so we store it in tempa
 
-# Decryption of  stage one
+# 2.2) Decryption of  stage one
 
 `tempa = a
 a = d ^ 31337  # 0111 1010 0110 1001
