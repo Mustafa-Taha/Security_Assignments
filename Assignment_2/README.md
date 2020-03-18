@@ -17,11 +17,13 @@
 
 # Analysing encryption stage two
 ## starting of <a>, <b,> <c>, <d> resultant of second stage
+    
 `a, b, c, d = c ^ F(d | F(b ^ F(a)) ^ F(d | b) ^ a), \
              b ^ F(d ^ F(a) ^ (d | a)), \
              a ^ F(d | F(d) ^ d), \
-             d ^ 1337
-print(a)
+             d ^ 1337`
+    
+`print(a)
 print(b)
 print(c)
 print(d)`
@@ -31,38 +33,45 @@ print(d)`
 # so we store it in tempa
 
 # Decryption of  stage two
+
 `tempa = a
 d = d ^ 1337  # 0000 0101 0011 1001
 a = c ^ (F(d | F(d) ^ d))
 b = b ^ (F(d ^ F(a) ^ (d | a)))
-c = tempa ^ (F(d | F(b ^ F(a)) ^ F(d | b) ^ a))
-print(a)
+c = tempa ^ (F(d | F(b ^ F(a)) ^ F(d | b) ^ a))`
+
+`print(a)
 print(b)
 print(c)
 print(d)`
 
 # Analysing encryption stage one
 ## assuming starting of <a>, <b,> <c>, <d> resultant of first stage
+    
 `a, b, c, d = b ^ F(a | F(c ^ F(d)) ^ F(a | c) ^ d), \
              c ^ F(a ^ F(d) ^ (a | d)), \
              d ^ F(a | F(a) ^ a), \
-             a ^ 31337
-print(a)
+             a ^ 31337`
+             
+`print(a)
 print(b)
 print(c)
 print(d)`
+    
 # Second stage decryption #obtain <a> -> <d> -> <c> -> <b> obtained from first stage
 # notice we will use <a>(encrypted version) in obtaining <b> at te end
 # but we will over write it when obtaining <a>(decrypted version) itself
 # so we store it in tempa
 
-# Decryotion of  stage one
+# Decryption of  stage one
+
 `tempa = a
 a = d ^ 31337  # 0111 1010 0110 1001
 d = c ^ F(a | F(a) ^ a)
 c = b ^ F(a ^ F(d) ^ (a | d))
-b = tempa ^ F(a | F(c ^ F(d)) ^ F(a | c) ^ d)
-print(a)
+b = tempa ^ F(a | F(c ^ F(d)) ^ F(a | c) ^ d)`
+
+`print(a)
 print(b)
 print(c)
 print(d)`
