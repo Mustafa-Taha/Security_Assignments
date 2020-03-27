@@ -1,0 +1,5 @@
+pip install flask
+" " nltk
+" " pdfminer
+" " web3==3.6.2
+
