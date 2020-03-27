@@ -1,4 +1,4 @@
-# **Describtion of solution process**
+# **Description of solution process**
 `from struct import pack, unpack`
 
 `def F(w):
