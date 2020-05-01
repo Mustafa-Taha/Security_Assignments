@@ -1,8 +1,8 @@
 # program to encrypt and decrypt classical ciphers .
 
 ### The whole program in one solution.py file.
-### The program supports encryption and decryption using shift, affine, andvigenere ciphers.
-
+### The program supports encryption and decryption using shift, affine, and vigenere ciphers.
+### Run from cmd or terminal
 ## callable from command line as follows:
   #### First argument is the cipher type [“shift”,”affine”,”vigenere”].
   #### Second argument is the operation type [“enc”, “dec”].
