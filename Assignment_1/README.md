@@ -16,3 +16,5 @@
 ####   Case 4 :solution.py <aff|affine> <dec|decrypt> input.text output.text a b
 ####   Case 5 :solution.py <vigenere|vig> <enc|encrypt> input.text output.text Key
 ####   Case 6 :solution.py <vigenere|vig> <dec|decrypt> input.text output.text Key
+
+## Note : File extension can be write .text or .txt
