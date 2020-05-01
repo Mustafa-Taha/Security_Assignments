@@ -1,4 +1,4 @@
-# **Description of solution process**
+# **Description of solution process of Cybertalent problem genfei**
 `from struct import pack, unpack`
 
 `def F(w):
